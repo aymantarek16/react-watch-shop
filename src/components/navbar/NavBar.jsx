@@ -26,6 +26,7 @@ const NavBar = () => {
   }, []);
 
   const handleToggleNav = () => {
+    window.scrollTo(0, 0)
     setToggleNav(false);
   };
 
