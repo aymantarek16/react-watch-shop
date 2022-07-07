@@ -1,0 +1,42 @@
+.boxicon {
+  padding: 50px 20px 50px 45px;
+  background-color: #ea0000;
+  height: auto;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &_items {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
+  
+    i{
+        font-size: 33px;
+        color: #fff !important;
+    }
+    h6{
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 12px 0;
+        font-family: Roboto, sans-serif;
+    }
+    p{
+        font-size: 16px;
+        width: 70%;
+        color: rgb(211, 209, 209);
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+  }
+}

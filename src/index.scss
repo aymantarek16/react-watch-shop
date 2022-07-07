@@ -1,0 +1,102 @@
+// ============================ Fonts ============================
+// font-family: 'Josefin Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&display=swap");
+// font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+// ============================ Variables ============================ //
+$primaryColor: #0b1c39;
+$secondaryColor: #ff2020;
+
+// ============================ Global reset ============================ //
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.btn {
+  padding: 20px 25px;
+  background: #000;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #ff2020;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover::after {
+    width: 100%;
+    animation-name: width;
+    animation-duration: 0.7s;
+  }
+
+  @keyframes width {
+    0% {
+      width: 20%;
+    }
+    60% {
+      width: 100%;
+    }
+    80% {
+      width: 85%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+// ============================ Scrollbar ============================ //
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #ff2020;
+  height: 8rem;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #F0F0F2;
+}

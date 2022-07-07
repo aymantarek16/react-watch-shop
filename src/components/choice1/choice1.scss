@@ -1,0 +1,46 @@
+.choice1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px 0;
+  }
+  &_info {
+    flex-basis: 50%;
+    padding: 0 20px;
+    h2 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1;
+      @media screen and (max-width: 520px) {
+        font-size: 29px;
+      }
+    }
+    p {
+      font-family: Roboto, sans-serif;
+      color: rgb(119, 119, 119);
+      margin: 40px 0;
+      line-height: 1.4;
+      width: 80%;
+      font-size: 17px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .btn {
+      background: #ff2020;
+      &::after {
+        background: #000;
+      }
+    }
+  }
+
+  &_image {
+    img {
+      padding: 0 20px;
+    }
+  }
+}

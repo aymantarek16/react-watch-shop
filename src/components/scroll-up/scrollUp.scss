@@ -1,0 +1,29 @@
+.scrollUp{
+    position: fixed;
+    z-index: 2147483647;
+    background: #ff2020;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    .icon{
+        color: #fff;
+        // transform: rotateY(180deg);
+        font-size: 26px;
+        position: relative;
+        top: 5px;
+    }
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
+}
+
+.hidescroll{
+    display: none;
+}

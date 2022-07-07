@@ -1,0 +1,71 @@
+// ===================== MIXIN ===================== //
+@mixin h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000a2d;
+  display: inline-block;
+  position: relative;
+  padding-left: 68px;
+  width: 65%;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 2px;
+    background-color: #ff2020;
+    left: 0px;
+    top: 50%;
+  }
+  @media screen and (max-width : 768px) {
+    width: 100%;
+  }
+}
+@mixin parag {
+  color: rgb(136, 136, 136);
+  font-size: 14px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 10px 0 20px;
+  width: 65%;
+  display: block;
+  @media screen and (max-width : 768px) {
+    width: 100%;
+  }
+}
+// ===================== Styling ===================== //
+
+.our {
+  max-width: 1100px;
+  padding: 120px 20px;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+
+
+  &_mession {
+    h2 {
+      @include h2();
+    }
+    p {
+      @include parag();
+    }
+    span {
+      @include parag();
+    }
+  }
+
+  &_vision {
+    margin-top: 50px;
+    h2 {
+      @include h2();
+    }
+    p {
+      @include parag();
+    }
+    span {
+      @include parag();
+    }
+  }
+}

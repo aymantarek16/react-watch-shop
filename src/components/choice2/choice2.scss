@@ -1,0 +1,50 @@
+.choice2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 10px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px 0;
+  }
+  &_image {
+    flex-basis: 50%;
+    margin-right: 100px;
+    @media screen and (max-width: 768px) {
+        margin-right: 0;
+      }
+    img {
+      padding: 0 20px;
+    }
+  }
+  &_info {
+    padding: 0 20px;
+    flex-basis: 50%;
+    h2 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1;
+      @media screen and (max-width: 520px) {
+        font-size: 29px;
+      }
+    }
+    p {
+      font-family: Roboto, sans-serif;
+      color: rgb(119, 119, 119);
+      margin: 40px 0;
+      line-height: 1.4;
+      width: 80%;
+      font-size: 17px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .btn {
+      background: #ff2020;
+      &::after {
+        background: #000;
+      }
+    }
+  }
+}

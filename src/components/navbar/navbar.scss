@@ -1,0 +1,214 @@
+// ============================= Mixin ============================= //
+@mixin links {
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    color: #ff2020;
+  }
+  a {
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #000;
+    &:hover {
+      color: #ff2020;
+    }
+  }
+}
+// ============================= Navbar Styling ============================= //
+.navbar {
+  z-index: 9999999;
+  height: 14vh;
+  background-color: #fff;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  // Styling for Search Page
+  .searchPage {
+    font-family: "Roboto", sans-serif;
+    transition: all 0.5s ease-in-out;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -122323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    &.open {
+      opacity: 1;
+      z-index: 9999999999999 !important;
+      visibility: visible;
+    }
+
+    input {
+      outline: none;
+      width: 500px;
+      font-size: 40px;
+      border: none;
+      border-bottom: 2px solid #333;
+      background: none;
+      color: #999;
+      overflow: visible;
+      font-family: inherit;
+      padding: 7px 3px;
+      outline: none;
+      @media screen and (max-width: 575px) {
+        width: 251px;
+        font-size: 26px;
+      }
+    }
+    .closeBtn {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 23px;
+      top: 30px;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: rotate(90deg);
+      }
+      @media screen and (max-width: 575px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .toggle {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      font-size: 24px;
+    }
+  }
+  h1 {
+    span:last-child {
+      color: #ff2020;
+      font-weight: bold;
+    }
+  }
+  ul {
+    display: flex !important;
+    @media (max-width: 768px) {
+      display: none !important;
+      position: absolute !important;
+      z-index: 999999;
+      background: #fff;
+      top: 13.8vh;
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding-left: 13px;
+      padding-top: 5px;
+      flex-direction: column;
+      border-bottom: 2px solid rgba(204, 204, 204, 0.406);
+      transition: all 0.4s ease;
+    }
+    @media (max-height: 360px) {
+      padding-top: 20px;
+    }
+
+    &.showList {
+      display: block !important;
+    }
+
+    li {
+      @media screen and (max-width: 768px) {
+        margin: 0 0 30px 0;
+      }
+      margin: 0 17px;
+      a {
+        color: #0b1c39;
+        position: relative;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -5px;
+          background-color: #ff2020;
+          width: 4px;
+          height: 0;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          color: #ff2020;
+        }
+        &.active {
+          color: #ff2020 !important;
+          font-weight: bold;
+          &::after {
+            height: 40px;
+          }
+        }
+        &:hover::after {
+          height: 40px;
+        }
+      }
+    }
+
+    .iconsTablet {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        width: 35%;
+        padding-bottom: 20px;
+      }
+      .icon {
+        @include links;
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    .icon {
+      @include links;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+//  ===================== Navbar Scroll =====================  //
+.navbar2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-shadow: 2px 2px 15px #ccc;
+  top: -100px;
+  transform: translateY(100px);
+  transition: transform 0.8s ;
+}
+

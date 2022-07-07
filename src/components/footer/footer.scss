@@ -1,0 +1,117 @@
+// ============================= Footer Top ============================= //
+.footer {
+  max-width: 1200px;
+
+  padding: 90px 0 90px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &_image {
+    img {
+      margin-bottom: 30px;
+    }
+    p {
+      color: rgb(134, 140, 152);
+      font-size: 16px;
+      margin-bottom: 50px;
+      line-height: 1.8;
+      width: 80%;
+    }
+  }
+
+  &_item {
+    h4 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      margin-bottom: 29px;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-family: Roboto, sans-serif;
+    }
+    ul {
+      li {
+        font-family: Roboto, sans-serif;
+        color: rgb(134, 140, 152);
+        font-weight: 300;
+        margin-bottom: 22px;
+        cursor: pointer;
+        transition: all 0.3s ease-out 0s;
+        &:hover {
+          color: #ff2020;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+// ============================= Footer End ============================= //
+.footer_end {
+  max-width: 1200px;
+
+  padding: 30px 10px 100px 10px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &_info {
+    position: relative;
+    top: -7px;
+    p {
+      color: rgb(136, 136, 136);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 20px;
+      @media screen and (max-width: 550px) {
+        width: 90%;
+      }
+      span {
+        color: rgb(255, 32, 32);
+        font-weight: 600;
+        transition: all 0.4s ease-out;
+        &:hover{
+            margin-left: 10px;
+            cursor: pointer;
+        }
+      }
+      i {
+        color: rgb(255, 32, 32);
+        font-weight: bold;
+        margin: 0 5px;
+        position: relative;
+        top: 3px;
+        left: 1px;
+        transition: all 0.4s ease-out 0s;
+          &:hover{
+            color: rgb(136, 136, 136);
+
+          }
+      }
+    }
+  }
+
+  &_icons {
+    i {
+      color: rgb(34, 34, 34);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover{
+      transform: translateY('100px');
+      color: rgb(255, 32, 32);
+
+      }
+    }
+  }
+}
