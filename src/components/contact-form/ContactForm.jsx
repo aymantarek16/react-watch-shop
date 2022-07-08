@@ -43,7 +43,7 @@ const ContactForm = () => {
           <div className="getTouch_all-icons_icon">
             <i>{<BsPhone />}</i>
             <div className="getTouch_all-icons_icon_info">
-              <h6> &nbsp; +1 253 565 2365</h6>
+              <h6>+1 253 565 2365</h6>
               <p>Mon to Fri 9am to 6pm</p>
             </div>
           </div>

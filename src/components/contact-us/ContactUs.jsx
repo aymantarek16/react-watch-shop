@@ -1,6 +1,5 @@
 import React from 'react';
 import './contact-us.scss';
-import backGround from '../../img/about , contact.jpg';
 
 const AboutUS = () => {
   return (
