@@ -2,4 +2,9 @@
 
 Full Responseve Design 
 
-Building by React.js & Sass 
+### Technologies Used:
+
+---
+
+1. React.js
+2. Scss
