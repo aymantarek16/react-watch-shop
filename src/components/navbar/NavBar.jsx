@@ -6,7 +6,6 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-// import Search from '../../page/Search';
 import { useRef } from "react";
 
 const NavBar = () => {
