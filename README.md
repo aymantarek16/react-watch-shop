@@ -2,4 +2,4 @@
 
 Full Responseve Design 
 
-Build by React.js & Sass 
+Building by React.js & Sass 
