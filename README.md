@@ -9,3 +9,6 @@ Full Responseve Design
 1. React.js
 2. Scss
  
+
+![preview](https://i.imgur.com/Pc2xpmL.jpeg)
+ 
